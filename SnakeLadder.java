@@ -14,7 +14,10 @@ public class SnakeLadder {
 			    player1_pos+=0;
 		    }
 		    else if(luckRoll==ladder) {
-			    player1_pos+=diceRoll;
+		    	if(player1_pos+diceRoll>100)
+			        player1_pos=player1_pos;
+		    	else
+		    		player1_pos+=diceRoll;
 		    }
 		    else {
 			    if(player1_pos-diceRoll<0) {
